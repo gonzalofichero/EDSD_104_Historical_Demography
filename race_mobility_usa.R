@@ -52,5 +52,28 @@ round(prop.table(table(data$race_v2_factor, data$YEAR),2),4)*100
 round(prop.table(table(data$occup_factor, data$race_factor),1),4)*100
 round(prop.table(table(data$race_factor, data$labforce_factor),1),4)*100
 
+# Country of Birth by Year of Census
+round(prop.table(table(data$birth_cty_factor, data$YEAR),2),4)*100
+# Irish: from 3.7 to 1.48%
+# Germans: form 3.71 to 2.71
+# UK: from 1.84 to 1.35
+
+
+
+# Let's keep BLACKS + Migrants from Ireland + Germany + UK
+migrants <- data %>% filter(birth_cty_factor %in% c("Ireland", "Germany", "United Kingdom") | race_v2_factor %in% c("Black", "Mulatto (1850-1910)"))
+# From 3M to 570k registers
+
+
+
+
+
+
+
+
+
+
+
+
 
 
